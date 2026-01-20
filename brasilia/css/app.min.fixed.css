@@ -1,0 +1,1050 @@
+.btn-gradient-green,
+.btn-gradient-orange {
+    filter: drop-shadow(0 3px 2.5px rgba(7, 7, 7, .2))
+}
+
+.footer .links a,
+.navbar .menu a {
+    text-decoration: none
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.btn-gradient-green {
+/*    background: #00A443;*/
+    background: #26BF64;
+    color: #fff;
+/*    background: linear-gradient(0deg, #00A443 0, #26BF64 30%, #26BF64 70%, #00A443 100%)*/
+}
+
+.btn-gradient-green:active,
+.btn-gradient-green:focus,
+.btn-gradient-green:hover {
+    background: #5BD38C;
+/*    background: linear-gradient(0deg, #5BD38C 0, #26BF64 30%, #26BF64 70%, #5BD38C 100%)*/
+}
+
+.btn-rounded {
+    border-radius: 100px
+}
+
+.btn-gradient-orange {
+    background: #f29038;
+    background: linear-gradient(0deg, #f29038 0, #a7570f 30%, #cf6910 70%, #f29038 100%)
+}
+
+.btn-gradient-orange:active,
+.btn-gradient-orange:focus,
+.btn-gradient-orange:hover {
+    background: linear-gradient(0deg, #df812f 0, #a7570f 30%, #a0510b 70%, #df812f 100%)
+}
+
+.btn-action {
+    font-size: 20px;
+    color: #fffdfb;
+    font-weight: 700;
+    font-family: "Dialog Semi Bold";
+    filter: drop-shadow(0 4px 2px rgba(7, 7, 7, .22));
+    padding: 3px 20px 5px;
+    text-shadow: 1px 2px 3px #7b7b7b;
+    transition: ease .3s
+}
+
+.question-content,
+.question-title {
+    color: #fff;
+    font-weight: 500
+}
+
+.btn-action:active,
+.btn-action:focus,
+.btn-action:hover {
+    color: #fff;
+    transform: scale(1.1)
+}
+
+:root {
+    --theme-orange: #f28e02;
+    --theme-green: #50611d;
+    --theme-light-green: #5c871b
+}
+
+.faqs {
+    margin-top: 20px
+}
+
+.faq-bg.bg-gradient-orange {
+    background: linear-gradient(180deg, #fff -15%, #f28e02 68%)
+}
+
+.faqs .section-title {
+    font-size: 35px;
+    line-height: 40px
+}
+
+#questions {
+    margin-top: 30px
+}
+
+.faqs .question {
+    background: 0 0;
+    box-shadow: none;
+    border: 2px solid #fff;
+    border-radius: 23px;
+    overflow: hidden;
+    width: 100%;
+    max-width: 600px;
+    margin-top: 5px;
+    padding: 8px 15px
+}
+
+.question-title {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #dadada;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    transition: all .3s
+}
+
+.question-title.collapsed {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none
+}
+
+.question-title svg {
+    fill: #fff
+}
+
+.question-title .plus {
+    display: none
+}
+
+.question-title .minus,
+.question-title.collapsed .plus {
+    display: inline
+}
+
+.question-title.collapsed .minus {
+    display: none
+}
+
+.navbar,
+.navbar .menu {
+    display: flex;
+    transition: ease .3s
+}
+
+.question-content a {
+    color: #3d5002;
+    font-weight: 600
+}
+
+@font-face {
+    font-family: "Dialog Bold";
+    src: url(../fonts/dialog_bold.ttf) format("opentype")
+}
+
+@font-face {
+    font-family: "Dialog Light";
+    src: url(../fonts/dialog_light.ttf) format("opentype")
+}
+
+@font-face {
+    font-family: "Dialog Regular";
+    src: url(../fonts/dialog_regular.ttf) format("opentype")
+}
+
+@font-face {
+    font-family: "Dialog Semi Bold";
+    src: url(../fonts/dialog_semi_bold_regular.ttf) format("opentype")
+}
+
+body {
+    background-color: #f9f9f9
+}
+
+a {
+    outline: 0
+}
+
+.row {
+    width: 100%
+}
+
+.section-title {
+    font-size: 50px;
+    color: #fff;
+    font-weight: 700;
+    font-family: "Dialog Semi Bold";
+    text-shadow: 1px 2px 3px #3f3f3f;
+    text-align: center
+}
+
+.copyright,
+.footer .complementary-informations,
+.footer .links a,
+.gifts .subtitle,
+.navbar .menu a {
+    font-family: Arial
+}
+
+.spacing {
+    margin-top: 2rem
+}
+
+.navbar {
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    background-color: #fff;
+    z-index: 9
+}
+
+.navbar .container {
+    flex-wrap: nowrap
+}
+
+.navbar .logo {
+    max-width: 150px;
+    max-height: 70px
+}
+
+.navbar .menu {
+    align-items: center
+}
+
+.navbar .menu a {
+    font-size: 14px;
+    color: #00402A;
+    margin: 0 8px;
+    font-weight: 500;
+    transition: ease .3s
+}
+
+.btn-toggle,
+.navbar .menu a:active,
+.navbar .menu a:focus,
+.navbar .menu a:hover {
+    color: #50611d
+}
+
+.btn-toggle {
+    display: none;
+    outline: 0;
+    font-size: 30px;
+    box-shadow: none !important
+}
+
+.btn-toggle:active,
+.btn-toggle:focus,
+.btn-toggle:hover {
+    color: #f28e02
+}
+
+.bg-gradient-orange {
+    background: #f6b283;
+    background: linear-gradient(180deg, #fff -12%, #f28e02)
+}
+
+.bg-gradient-iberdrola {
+/*    background: linear-gradient(180deg, #00A443 -15%, #5BD38C 68%)*/
+background: linear-gradient(180deg, rgba(0,127,51,1) 0%, rgba(0,140,57,1) 35%, rgba(0,164,67,1) 100%);
+}
+
+.header {
+    padding: 50px 5px
+}
+
+.header .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center
+}
+
+.header .btn-action {
+    font-size: 25px;
+    margin-top: 20px
+}
+
+.banner img {
+    max-width: 100%
+}
+
+.banner .mobile {
+    display: none
+}
+
+.footer {
+    background-color: #00402A;
+    padding: 20px 5px
+}
+
+.footer .links {
+    display: flex;
+    flex-wrap: wrap
+}
+
+.footer .links a {
+    font-size: 17px;
+    color: #fff;
+    font-weight: 700;
+    margin-right: 20px
+}
+
+.footer .links a:last-child {
+    margin-right: 0
+}
+
+.footer .links a:active,
+.footer .links a:focus,
+.footer .links a:hover {
+    color: #fff
+}
+
+.footer .complementary-informations {
+    font-size: 13px;
+    line-height: 20px;
+    color: #fff;
+    margin: 10px 0
+}
+
+.socials {
+    display: flex;
+    margin: 10px 0
+}
+
+.socials a {
+    width: 40px;
+    height: 40px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    margin-right: 15px;
+    color: #00402A;
+    text-decoration: none;
+    transition: ease .3s
+}
+
+.socials a:last-child {
+    margin-right: 0
+}
+
+.socials a:active,
+.socials a:focus,
+.socials a:hover {
+    background-color: #00A443;
+    color: #fff
+}
+
+.footer .logo {
+    max-width: 100%;
+    float: right;
+    margin-top: 20px
+}
+
+.copyright {
+    font-size: 14px;
+    line-height: 20px;
+    color: #fff
+}
+
+.youtube-video-container {
+    overflow: hidden;
+    position: relative;
+    width: 100%
+}
+
+.youtube-video-container::after {
+    padding-top: 56.25%;
+    display: block;
+    content: ""
+}
+
+.youtube-video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding-top: 10px;
+}
+
+@media screen and (max-width:991px) {
+    .section-title {
+        font-size: 30px;
+        line-height: 35px
+    }
+
+    .navbar .container {
+        flex-wrap: wrap
+    }
+
+    .navbar .menu {
+        flex-direction: column;
+        width: 100vw;
+        max-height: 0;
+        overflow: hidden
+    }
+
+    .navbar.expanded .menu {
+        max-height: 100vh;
+        overflow: auto
+    }
+
+    .navbar .menu a {
+        margin: 5px 0
+    }
+
+    .navbar .logo {
+        max-height: 50px
+    }
+
+    .banner .mobile,
+    .btn-toggle {
+        display: inline-block
+    }
+
+    .banner .desktop {
+        display: none
+    }
+
+    .footer .logo {
+        float: none;
+        margin-bottom: 20px;
+        width: 100px
+    }
+}
+
+.gift-label,
+.gifts .subtitle {
+    font-size: 22px;
+    text-align: center
+}
+
+.gifts {
+    background-color: #FFF5EC;
+/*    background-image: url(../img/bg-premios.png);*/
+    background-size: cover;
+    padding: 30px 0 0
+}
+
+.gifts .subtitle {
+    color: #00A443;
+/*    text-shadow: 1px 2px 3px #3f3f3f*/
+}
+
+.gift-label,
+.gift-title {
+    color: #fff;
+    font-weight: 700;
+    font-family: "Dialog Semi Bold";
+/*    text-shadow: 1px 2px 3px #3f3f3f*/
+}
+
+.gift-item {
+    background-color: #00A443;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    margin: 10px 0;
+    transition: ease .3s;
+    height: 100%
+}
+
+.gift-item:hover {
+    transform: translateY(-10px)
+}
+
+.gift-item img {
+    max-width: 80%
+}
+
+.gift-title {
+    font-size: 35px;
+    text-align: center;
+    line-height: 35px
+}
+
+.partner-description,
+.step .description {
+    color: #fff;
+    font-family: Arial;
+    text-align: center
+}
+
+.gift-title.spacing {
+    margin-top: 15px
+}
+
+.gifts-footer {
+    background-color: #ff8f00;
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    width: 100%;
+    padding: 5px 0
+}
+
+.steps {
+    background-color: #00A443;
+    padding: 30px 5px
+}
+
+.step img {
+    max-width: 100%;
+    transition: ease .3s
+}
+
+.step img:hover {
+    transform: scale(1.1)
+}
+
+.step .description {
+    font-size: 18px
+}
+
+.step .description a {
+    color: #fff;
+    text-decoration: underline;
+    font-weight: 600
+}
+
+@media screen and (max-width:991px) {
+    .gift-item {
+        height: auto
+    }
+
+    .gift-title {
+        margin-bottom: 10px
+    }
+
+    .gift-title.spacing {
+        margin-top: 0
+    }
+}
+
+.partners {
+    margin-top: 20px;
+    width: 100%
+}
+
+.partner-img {
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: ease .3s
+}
+
+.partner-img:hover {
+    transform: translateY(-10px)
+}
+
+.partner-description {
+    font-size: 14px;
+    margin-top: 10px
+}
+
+.step-by-step {
+    margin-top: 20px;
+    width: 100%
+}
+
+.archive {
+    margin-top: 10px
+}
+
+.view-full {
+    color: #50611d;
+    font-weight: 600;
+    margin-top: 20px
+}
+
+.video {
+    width: 100%
+}
+
+.video video {
+    width: 100%;
+    height: auto
+}
+
+.btn-inline {
+    display: inline-block;
+    margin: 10px;
+    text-align: center;
+}
+
+.tam-ganhadores {
+    width: 600px;
+}
+
+.vid-ganhadores{
+    margin-top: 25px;
+    text-align: center;
+}
+
+/* =========================
+
+/* =========================
+   OVERRIDE FINAL (COELBA) - FIX TARJA + FOOTER
+   Cole este bloco NO FINAL do arquivo
+   ========================= */
+
+:root{
+  --neo-green-dark: #00402A;   /* verde escuro */
+  --neo-green: #007F33;        /* verde principal */
+  --neo-green-mid: #008C39;    /* verde médio */
+  --neo-green-light: #00A443;  /* verde claro (detalhes) */
+  --neo-cream: #F5EEE6;        /* bege do “Prêmios” */
+  --neo-orange: #FF8F00;
+}
+
+/* Header: mantenha o gradiente do layout */
+.bg-gradient-iberdrola{
+  background: linear-gradient(
+    180deg,
+    var(--neo-green) 0%,
+    var(--neo-green-mid) 35%,
+    var(--neo-green-light) 100%
+  ) !important;
+}
+
+/* =========================
+   TARJA LARANJA (gifts-footer)
+   - Evita “imagem gigante”
+   - Mantém texto centralizado
+   - Compatível com: (1) imagem <img> ou (2) background-image
+   ========================= */
+
+/* Base da tarja */
+.gifts-footer{
+  background-color: var(--neo-orange) !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* Se você estiver usando wrapper + img */
+.gifts-footer-wrap{
+  width: 100%;
+  background-color: var(--neo-orange);
+  overflow: hidden;
+}
+
+.gifts-footer-img{
+  width: 100%;
+  height: auto;
+  display: block;
+  /* trava a altura da faixa para não “estourar” */
+  max-height: 110px;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Se a tarja for via background-image (sem <img>) */
+.gifts-footer:not(:has(img)){
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  min-height: 90px;
+}
+
+/* Título/texto da tarja (quando existir texto dentro) */
+.gifts-footer .gifts-footer-title,
+.gifts-footer h2,
+.gifts-footer p{
+  margin: 0;
+  padding: 18px 12px;
+  color: #fff;
+  text-align: center;
+  font-weight: 700;
+  font-family: "Dialog Semi Bold", Arial, sans-serif;
+  line-height: 1.1;
+}
+
+/* Mobile: reduz altura/padding */
+@media screen and (max-width: 991px){
+  .gifts-footer-img{ max-height: 85px; }
+  .gifts-footer .gifts-footer-title,
+  .gifts-footer h2,
+  .gifts-footer p{ padding: 14px 10px; }
+}
+
+/* =========================
+   PRÊMIOS / CARDS
+   - Garante que imagens dos cards apareçam
+   ========================= */
+
+.gift-item img,
+.gift-box img{
+  display: block;
+  max-width: 80%;
+  height: auto;
+}
+
+/* Mantém o “bege” dos prêmios se a seção usar .gifts */
+.gifts{
+  background-color: #FFF5EC !important;
+}
+
+/* =========================
+   COMO PARTICIPAR (steps)
+   - Garante que as imagens dos passos apareçam
+   ========================= */
+
+.steps .step img,
+.step img{
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* =========================
+   FOOTER (igual ao FAQ)
+   - Evita cortar a logo branca
+   - Mantém alinhamento esquerdo/direito
+   ========================= */
+
+.footer{
+  background-color: var(--neo-green-dark) !important;
+}
+
+.footer .container{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.footer-left{
+  flex: 1 1 520px;
+  min-width: 280px;
+}
+
+.footer-right{
+  flex: 0 1 240px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+
+.footer-logo-img{
+  width: 220px;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin-top: 0;
+}
+
+/* remove float antigo se existir em outras regras */
+.footer .logo{
+  float: none !important;
+  margin-top: 0 !important;
+  max-width: 100% !important;
+}
+
+@media screen and (max-width: 991px){
+  .footer-right{ justify-content: flex-start; }
+  .footer-logo-img{ width: 160px; }
+}
+
+
+/* =========================
+   OVERRIDE FINAL (COELBA) - FIX TARJA + FOOTER
+   Cole este bloco NO FINAL do arquivo
+   ========================= */
+
+:root{
+  --neo-green-dark: #00402A;   /* verde escuro */
+  --neo-green: #007F33;        /* verde principal */
+  --neo-green-mid: #008C39;    /* verde medio */
+  --neo-green-light: #00A443;  /* verde claro */
+  --neo-cream: #F5EEE6;        /* bege */
+  --neo-orange: #FF8F00;
+}
+
+/* Mantem o gradiente do header */
+.bg-gradient-iberdrola{
+  background: linear-gradient(
+    180deg,
+    var(--neo-green) 0%,
+    var(--neo-green-mid) 35%,
+    var(--neo-green-light) 100%
+  ) !important;
+}
+
+/* =========================
+   TARJA LARANJA (gifts-footer)
+   Objetivo: manter a tarja fina, sem "estourar" a altura,
+   mesmo se a imagem enviada for grande.
+   ========================= */
+
+/* Desliga regras antigas que escondiam conteudo */
+.gifts-footer *{ display: initial; }
+
+/* Container da tarja */
+.gifts-footer,
+.gifts-footer-wrap{
+  width: 100%;
+  background-color: var(--neo-orange);
+  margin: 0;
+  padding: 0;
+  line-height: 0; /* evita aumentar altura por whitespace */
+}
+
+/* Caso voce use IMAGEM dentro da tarja */
+.gifts-footer img,
+.gifts-footer-img{
+  width: 100%;
+  height: 80px;              /* ALTURA DA TARJA (ajuste fino aqui) */
+  max-height: 90px;
+  display: block;
+  object-fit: cover;         /* corta somente na vertical se precisar */
+  object-position: center;
+}
+
+@media screen and (max-width: 991px){
+  .gifts-footer img,
+  .gifts-footer-img{
+    height: 64px;
+    max-height: 74px;
+  }
+}
+
+/* Se existir texto sobre a tarja (ex: h2), garante centralizacao e tamanho */
+.gifts-footer-text,
+.tarja-text,
+.orange-strip-text{
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+  text-align: center;
+  color: #fff;
+  font-family: "Dialog Semi Bold", Arial, sans-serif;
+  font-weight: 700;
+  font-size: clamp(18px, 2.2vw, 34px);
+  line-height: 1.1;
+  text-shadow: 1px 2px 3px rgba(0,0,0,.25);
+}
+
+/* =========================
+   PREMIOS (garante que imagens/arts nao somem)
+   ========================= */
+
+.gifts{
+  background-color: var(--neo-cream);
+}
+
+.gift-item img,
+.gifts img{
+  display: block;
+  max-width: 80%;
+  height: auto;
+}
+
+/* =========================
+   COMO PARTICIPAR (passos)
+   ========================= */
+
+.steps{ background-color: var(--neo-green-light); }
+.step img{ display:block; max-width:100%; height:auto; }
+
+/* =========================
+   FOOTER (igual ao FAQ)
+   Estrutura esperada (do faq.html):
+   <footer class="footer"><div class="container">
+     <div class="footer-left">...</div>
+     <div class="footer-right"><img class="footer-logo-img" ...></div>
+   </div></footer>
+   ========================= */
+
+.footer{
+  background-color: var(--neo-green-dark);
+  padding: 20px 0;
+}
+
+.footer .container{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.footer-left{ flex: 1 1 520px; min-width: 280px; }
+.footer-right{ flex: 0 0 auto; display:flex; justify-content:flex-end; align-items:flex-start; }
+
+.footer .links{
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+.footer .links a{
+  font-size: 17px;
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.footer .complementary-informations{
+  font-size: 13px;
+  line-height: 20px;
+  color: #fff;
+  margin: 10px 0;
+}
+
+.socials{ display:flex; gap: 12px; margin: 10px 0; }
+.socials a{ width: 40px; height: 40px; }
+
+.footer-logo-img,
+.footer-right img{
+  width: 220px;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin-top: 0;
+}
+
+@media screen and (max-width: 991px){
+  .footer .container{ flex-direction: column; align-items: flex-start; }
+  .footer-right{ width:100%; justify-content:flex-start; }
+  .footer-logo-img,
+  .footer-right img{ width: 180px; }
+}
+
+/* =========================
+   PATCHES ADICIONAIS (INDEX) - TARJA LARANJA + IMAGENS
+   ========================= */
+
+/* 1) Mantem o gradiente do topo (mesmo da pagina OK) */
+.bg-gradient-iberdrola{
+  background: linear-gradient(
+    180deg,
+    var(--neo-green) 0%,
+    var(--neo-green-mid) 35%,
+    var(--neo-green-light) 100%
+  ) !important;
+}
+
+/* 2) TARJA LARANJA: evita ficar "gigante" e garante responsivo
+   - Funciona tanto se voce usar <div class="gifts-footer">...</div>
+   - Quanto se voce usar <div class="gifts-footer-wrap"><img class="gifts-footer-img" ...></div>
+*/
+.gifts-footer,
+.gifts-footer-wrap{
+  width: 100%;
+  background: var(--neo-orange);
+  display: block;
+  line-height: 0;
+}
+
+/* Se existir IMG dentro, ela e quem aparece */
+.gifts-footer img,
+.gifts-footer-img{
+  width: 100%;
+  height: auto;
+  display: block;
+  /* Limita a altura para nao “estourar” a pagina */
+  max-height: 110px;
+  object-fit: cover;
+  object-position: center;
+}
+
+@media (max-width: 991px){
+  .gifts-footer img,
+  .gifts-footer-img{
+    max-height: 90px;
+  }
+}
+
+/* 3) Garante que imagens do conteudo nunca “sumam” por regra generica */
+.banner img,
+.gift-item img,
+.step img,
+.partner-img img{
+  display: block;
+  visibility: visible;
+}
+
+/* 4) Prêmios: garante alinhamento/escala igual ao layout (sem deformar) */
+.gift-item{
+  overflow: hidden;
+}
+.gift-item img{
+  max-width: 82%;
+  height: auto;
+}
+
+/* 5) Footer: previne corte da logo quando houver alguma regra antiga de float */
+.footer .logo,
+.footer-logo-img,
+.footer-right img{
+  float: none !important;
+  max-height: 90px;
+}
+
+
+/* 6) Footer (layout do FAQ): usa as classes do faq.html e mantem responsivo */
+.footer .container{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.footer-left{
+  flex: 1 1 520px;
+  min-width: 260px;
+}
+
+.footer-right{
+  flex: 0 0 auto;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  min-width: 220px;
+}
+
+.footer-right .footer-logo-img,
+.footer-right img{
+  width: 220px;
+  max-width: 100%;
+  height: auto;
+}
+
+@media (max-width: 991px){
+  .footer-right{
+    justify-content: flex-start;
+    min-width: 0;
+  }
+  .footer-right .footer-logo-img,
+  .footer-right img{
+    width: 180px;
+  }
+}
+

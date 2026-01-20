@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Regulamento | Neoenergia Brasília</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="./css/libs.min.css">
+  <link rel="stylesheet" href="./css/fontawesome.css">
+  <link rel="stylesheet" href="./css/solid.css">
+  <link rel="stylesheet" href="./css/brands.css">
+  <link rel="stylesheet" href="./css/app.min.css">
+
+  <style>
+    .reg-page { background:#fff; padding: 30px 0 10px; }
+    .reg-title { text-align:center; margin: 15px 0 20px; }
+    .reg-title h1 {
+      font-family: "Dialog Semi Bold", Arial, sans-serif;
+      font-size: 46px;
+      color:#00402A;
+      margin:0;
+    }
+
+    .pdf-shell { max-width: 980px; margin: 0 auto; padding: 0 15px 25px; }
+    .pdf-card {
+      background:#fff; border-radius: 16px; box-shadow: 0 10px 25px rgba(0,0,0,.08);
+      overflow:hidden; border: 1px solid rgba(0,0,0,.06);
+    }
+
+    .pdf-toolbar {
+      display:flex; gap:10px; align-items:center; justify-content:space-between;
+      padding: 12px 14px; background: #f7f7f7; border-bottom: 1px solid rgba(0,0,0,.06);
+      flex-wrap: wrap;
+    }
+
+    .pdf-btn {
+      display:inline-flex; align-items:center; justify-content:center; gap:8px;
+      height: 40px; padding: 0 14px; border-radius: 10px; border: 0; cursor: pointer;
+      background:#fff; color:#00402A; font-weight:600;
+      box-shadow: 0 2px 8px rgba(0,0,0,.08); transition: .2s ease;
+      user-select:none; text-decoration: none;
+    }
+
+    .pdf-btn:hover { transform: translateY(-1px); }
+    .pdf-btn:active { transform: translateY(0px); }
+
+    .pdf-info {
+      font-weight:600; color:#2b2b2b; font-size: 14px;
+      padding: 0 6px; white-space: nowrap;
+    }
+
+    .pdf-stage {
+      background:#efefef; display:flex; align-items:center; justify-content:center;
+      min-height: calc(100vh - 380px);
+    }
+
+    #pdf-canvas {
+      background:#fff; max-width: 100%; height: auto;
+      box-shadow: 0 10px 25px rgba(0,0,0,.12);
+      margin: 18px 0; border-radius: 6px;
+    }
+
+    .pdf-footerline {
+      display:flex; justify-content:center; align-items:center;
+      padding: 10px 14px 12px; background:#fff;
+      border-top: 1px solid rgba(0,0,0,.06); flex-direction: column; gap: 10px;
+    }
+
+    .pdf-hint { font-size: 13px; color:#555; margin:0; }
+
+    .back-home-wrap { display:flex; gap:10px; flex-wrap: wrap; justify-content:center; }
+
+    @media (max-width: 991px){
+      .reg-title h1{ font-size: 34px; }
+      .pdf-stage{ min-height: 520px; }
+      .pdf-btn{ height: 38px; padding: 0 12px; border-radius: 10px; }
+    }
+  </style>
+</head>
+
+<body>
+
+<header class="navbar">
+  <div class="container">
+    <a href="./index.html">
+      <img class="logo" src="./img/logo-ceb.png" alt="Neoenergia Brasília">
+    </a>
+    <button class="btn btn-toggle" id="btn-toggle" aria-label="Abrir menu">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+    <nav class="menu">
+      <a href="./index.html" class="link">Início</a>
+      <a href="./index.html#premios" class="link">Prêmios</a>
+      <a href="./index.html#como-participar" class="link">Como Participar</a>
+      <a href="./passo-a-passo.html" class="link">Passo a Passo</a>
+      <a href="./participar.html" class="link">Participar</a>
+      <a href="./faq.html" class="link">Dúvidas</a>
+      <a href="../home/index.html" class="link">Tela Inicial</a>
+    </nav>
+  </div>
+</header>
+
+<main class="reg-page">
+  <div class="reg-title">
+    <h1>Regulamento</h1>
+  </div>
+
+  <div class="pdf-shell">
+    <div class="pdf-card">
+
+      <div class="pdf-toolbar">
+        <div class="left">
+          <button class="pdf-btn" id="prevPage"><i class="fa-solid fa-chevron-left"></i> Anterior</button>
+          <button class="pdf-btn" id="nextPage">Próxima <i class="fa-solid fa-chevron-right"></i></button>
+          <span class="pdf-info">Página: <span id="pageNum">1</span> / <span id="pageCount">?</span></span>
+        </div>
+        <div class="right">
+          <button class="pdf-btn" id="zoomOut"><i class="fa-solid fa-minus"></i></button>
+          <button class="pdf-btn" id="zoomIn"><i class="fa-solid fa-plus"></i></button>
+          <a class="pdf-btn" id="downloadPdf" href="./docs/Regulamento_aditivo_brasilia.pdf" download>
+            <i class="fa-solid fa-download"></i> Baixar PDF
+          </a>
+        </div>
+      </div>
+
+      <div class="pdf-stage">
+        <canvas id="pdf-canvas"></canvas>
+      </div>
+
+      <div class="pdf-footerline">
+        <p class="pdf-hint">Se preferir, você pode baixar o arquivo.</p>
+        <div class="back-home-wrap">
+          <a href="./index.html" class="btn btn-gradient-green btn-rounded btn-action">Voltar para Home Brasília</a>
+          <a href="../home/index.html" class="btn btn-white btn-rounded btn-action">Tela Inicial</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="container footer-container">
+    <div class="footer-left">
+      <div class="links">
+        <a href="./regulamento.html">Regulamento</a>
+        <a href="./faq.html">Dúvidas</a>
+      </div>
+      <div class="complementary-informations">
+        Período da Promoção: 01/07/2025 a 02/01/2026<br>
+        Período de Participação: 01/07/2025 a 30/11/2025<br>
+        Certificado de Autorização SPA/ME Nº 04.042556/2025.<br>
+        Imagens meramente ilustrativas.
+      </div>
+      <div class="socials">
+        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+      </div>
+      <div class="copyright">2025 © Conta com PIX</div>
+    </div>
+    <div class="footer-right">
+      <img class="footer-logo-img" src="./img/logo-ceb-white.png" alt="Neoenergia Brasília">
+    </div>
+  </div>
+</footer>
+
+<!-- Scripts -->
+<script src="./js/libs.min.js"></script>
+<script src="./js/app.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+<script>
+  pdfjsLib.GlobalWorkerOptions.workerSrc =
+    "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js";
+
+  const PDF_URL = './docs/Regulamento_aditivo_brasilia.pdf';
+  let pdfDoc = null, pageNum = 1, pageRendering = false, pageNumPending = null, scale = 1.15;
+
+  const canvas = document.getElementById('pdf-canvas');
+  const ctx = canvas.getContext('2d');
+  const pageNumEl = document.getElementById('pageNum');
+  const pageCountEl = document.getElementById('pageCount');
+
+  function fitScaleForScreen(){
+    const w = window.innerWidth;
+    if (w < 420) scale = 0.95;
+    else if (w < 768) scale = 1.05;
+    else scale = 1.15;
+  }
+
+  async function renderPage(num) {
+    pageRendering = true;
+    const page = await pdfDoc.getPage(num);
+    const viewport = page.getViewport({ scale });
+    canvas.height = viewport.height;
+    canvas.width = viewport.width;
+    const renderTask = page.render({ canvasContext: ctx, viewport });
+    await renderTask.promise;
+    pageRendering = false;
+    pageNumEl.textContent = num;
+    if (pageNumPending !== null) {
+      const pending = pageNumPending;
+      pageNumPending = null;
+      renderPage(pending);
+    }
+  }
+
+  function queueRenderPage(num) {
+    if (pageRendering) pageNumPending = num;
+    else renderPage(num);
+  }
+
+  function onPrevPage() {
+    if (!pdfDoc || pageNum <= 1) return;
+    pageNum--;
+    queueRenderPage(pageNum);
+  }
+
+  function onNextPage() {
+    if (!pdfDoc || pageNum >= pdfDoc.numPages) return;
+    pageNum++;
+    queueRenderPage(pageNum);
+  }
+
+  function zoomIn() {
+    scale = Math.min(scale + 0.15, 2.2);
+    queueRenderPage(pageNum);
+  }
+
+  function zoomOut() {
+    scale = Math.max(scale - 0.15, 0.7);
+    queueRenderPage(pageNum);
+  }
+
+  (async function initPdf(){
+    try {
+      fitScaleForScreen();
+      const loadingTask = pdfjsLib.getDocument(PDF_URL);
+      pdfDoc = await loadingTask.promise;
+      pageCountEl.textContent = pdfDoc.numPages;
+      renderPage(pageNum);
+      document.getElementById('prevPage').addEventListener('click', onPrevPage);
+      document.getElementById('nextPage').addEventListener('click', onNextPage);
+      document.getElementById('zoomIn').addEventListener('click', zoomIn);
+      document.getElementById('zoomOut').addEventListener('click', zoomOut);
+      window.addEventListener('resize', () => {
+        fitScaleForScreen();
+        queueRenderPage(pageNum);
+      });
+    } catch(e) {
+      console.error('Erro ao carregar PDF:', e);
+      pageCountEl.textContent = '?';
+    }
+  })();
+</script>
+
+</body>
+</html>
